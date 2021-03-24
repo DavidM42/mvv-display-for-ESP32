@@ -1,0 +1,2 @@
+{"rule":"DE_AGREEMENT","sentence":"^\\Qmvv display for ESP32\nIn diesem Projekt wird eine Echtzeitanzeige gebaut mit der die nächsten Abfahrten des Münchner Nahverkehrs auf einem kleinem Display angezeigt werden.\\E$"}
+{"rule":"ABKUERZUNG_LEERZEICHEN","sentence":"^\\QDamit können weitere Informationen wie z.B. Gleis und Wagenzahl angezeigt werden.\\E$"}
