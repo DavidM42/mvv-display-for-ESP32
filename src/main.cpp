@@ -24,7 +24,8 @@ using namespace std;
 #include "WiFi.h"
 #include <Wire.h>
 #include "Free_Fonts.h"
-#include "Free_Sans.h"
+// #include "Free_Sans.h"
+#include "Bahnschrift9pt7b.h"
 #include <Button2.h>
 
 #define MAX_INCLUDE_TYPE 10
@@ -183,7 +184,8 @@ void drawDeparture(int display_line, String line, String destination, int track,
   int y_display_string = display_line * line_height + offest_string;
 
   //img.setFreeFont(FF17);
-  img.setFreeFont(&FreeSans9pt8b);
+  // img.setFreeFont(&FreeSans9pt8b);
+  img.setFreeFont(&BAHNSCHRIFT9pt7b);
   img.setTextDatum(TL_DATUM);
 
   //line
