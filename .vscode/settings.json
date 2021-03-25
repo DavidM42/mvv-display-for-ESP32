@@ -23,7 +23,10 @@
         "tuple": "cpp",
         "utility": "cpp",
         "typeinfo": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "numeric": "cpp",
+        "cinttypes": "cpp",
+        "cstdlib": "cpp"
     },
     "ltex.enabled": [
         "markdown"
