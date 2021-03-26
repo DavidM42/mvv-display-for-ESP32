@@ -1,0 +1,16 @@
+[
+    {
+        "wifi_name": "XXXXXXXX",
+        "wifi_pass": "XXXXXXXX",
+        "type     ": "mvg_api",
+        "url      ": "de:09162:110",
+        "include_type": [
+            "*"
+        ],
+        "include_line": [
+            "U2",
+            "U8"
+        ],
+        "exclude_destination": []
+    }
+]

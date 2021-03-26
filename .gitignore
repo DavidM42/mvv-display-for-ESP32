@@ -1,5 +1,8 @@
 config.h
+data/*.json
 Build/
+
+debugDeadEnds/
 
 # pio defaults
 .pio
