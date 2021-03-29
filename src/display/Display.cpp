@@ -254,8 +254,8 @@ void Display::drawDBDeparture(int display_line, String line, String destination,
     else if(lineType.substring(0,3) == "STR") {  // STR Bahn
         unsigned long font_color = TFT_BLACK;
 
-        img.fillTriangle(60, y_display, 1, y_display, 1, y_display + 14, 0xE800);           //Red Half
-        img.fillTriangle(1, y_display + 14, 60, y_display, 60, y_display + 14, TFT_ORANGE); //Orange Half
+        img.fillTriangle(60, y_display, 1, y_display, 1, y_display + 14, 0xff6969);           //Red Half
+        img.fillTriangle(1, y_display + 14, 60, y_display, 60, y_display + 14, 0xffbc47); //Orange Half
 
         // img.fillRoundRect(0, y_display, 28, 15, 7, rect_color);
         img.setTextColor(font_color);
@@ -263,16 +263,16 @@ void Display::drawDBDeparture(int display_line, String line, String destination,
     }
     else if (lineType[0] == 'U') //U-Bahn
     {
-        unsigned long rect_color = 0x661a6;
-        unsigned long font_color = TFT_WHITE;
+        uint16_t rect_color = 0x0062a9;
+        uint16_t font_color = TFT_WHITE;
 
         img.fillRect(1, y_display + 1, 28, 14, rect_color);
         img.setTextColor(font_color);
         img.drawString(line, 3, y_display_string);
     }
-    else if(lineType.substring(0,3) == "ICE") // ICE
+    else if(lineType.substring(0,2) == "IC") // IC & ICE
     {
-        unsigned long ice_font_color = TFT_DARKGREY;
+        unsigned long ice_font_color = TFT_LIGHTGREY;
         unsigned long ice_bg_red = TFT_RED;
         img.fillRect(1, y_display + 1, 60, 14, ice_bg_red);
         img.setTextColor(ice_font_color);
@@ -281,7 +281,7 @@ void Display::drawDBDeparture(int display_line, String line, String destination,
     else if(lineType.substring(0,2) == "RE" || lineType.substring(0,2) == "RB") // Regio Trains
     {
         unsigned long regio_bg_red = 0xcc061d;
-        img.fillRect(1, y_display + 1, 28, 14, regio_bg_red);
+        img.fillRect(1, y_display + 1, 55, 14, regio_bg_red);
         img.setTextColor(TFT_WHITE);
         img.drawString(line, 3, y_display_string);    
     }

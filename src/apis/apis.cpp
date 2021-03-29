@@ -8,7 +8,8 @@ Apis::Apis(Display displayIn)
 void Apis::handle_db_transport_rest(Config config)
 {
     HTTPClient http;
-    String url = "https://v5.db.transport.rest/stops/" + String(config.bahnhof) + "/departures?results=10&duration=120";
+    // TODO really remove taxis here? Probably
+    String url = "https://v5.db.transport.rest/stops/" + String(config.bahnhof) + "/departures?results=10&duration=60&taxi=false";
     http.begin(url);
     int httpResponseCode = http.GET();
 
@@ -138,6 +139,9 @@ void Apis::handle_db_transport_rest(Config config)
                             lineName = beforeSpace;
                         }
                     }
+
+                    // TODO Somehow sort departures after minutes to depart. Would know how to in Python or JS but oof cpp
+                    // departure_list.sort([](const Departure &a, const Departure &b) { return a.estimated_time < b.estimated_time; });
 
                     display.drawDBDeparture(cnt, lineName, doc[i]["direction"].as<String>(), doc[i]["platform"].as<String>(), minutes);
 
